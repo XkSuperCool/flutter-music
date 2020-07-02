@@ -51,22 +51,22 @@ $ flutter run
 
 ![](https://github.com/XkSuperCool/flutter-music/blob/master/screenshot/Screenshot_1593680474.png?raw=true)
 
-![](\screenshot\Screenshot_1593680486.png)
+![](https://github.com/XkSuperCool/flutter-music/blob/master/screenshot/Screenshot_1593680486.png)
 
-![](\screenshot\Screenshot_1593680501.png)
+![](https://github.com/XkSuperCool/flutter-music/blob/master/screenshot/\Screenshot_1593680501.png)
 
-![](\screenshot\Screenshot_1593680692.png)
+![](https://github.com/XkSuperCool/flutter-music/blob/master/screenshot/Screenshot_1593680692.png)
 
-![](\screenshot\Screenshot_1593680696.png)
+![](https://github.com/XkSuperCool/flutter-music/blob/master/screenshot/Screenshot_1593680696.png)
 
-![](\screenshot\Screenshot_1593680792.png)
+![](https://github.com/XkSuperCool/flutter-music/blob/master/screenshot/Screenshot_1593680792.png)
 
-![](\screenshot\Screenshot_1593680830.png)
+![](https://github.com/XkSuperCool/flutter-music/blob/master/screenshot/Screenshot_1593680830.png)
 
-![](\screenshot\Screenshot_1593680839.png)
+![](https://github.com/XkSuperCool/flutter-music/blob/master/screenshot/Screenshot_1593680839.png)
 
-![](\screenshot\Screenshot_1593680845.png)
+![](https://github.com/XkSuperCool/flutter-music/blob/master/screenshot/Screenshot_1593680845.png)
 
-![](\screenshot\Screenshot_1593680871.png)
+![](https://github.com/XkSuperCool/flutter-music/blob/master/screenshot/Screenshot_1593680871.png)
 
-![](\screenshot\Screenshot_1593681039.png)
+![](https://github.com/XkSuperCool/flutter-music/blob/master/screenshot/Screenshot_1593681039.png)
