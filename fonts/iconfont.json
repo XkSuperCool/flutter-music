@@ -1,0 +1,51 @@
+{
+  "id": "1895974",
+  "name": "flutter_music",
+  "font_family": "iconfont",
+  "css_prefix_text": "icon-",
+  "description": "",
+  "glyphs": [
+    {
+      "icon_id": "1145989",
+      "name": "湖畔－赞",
+      "font_class": "zan",
+      "unicode": "e66a",
+      "unicode_decimal": 58986
+    },
+    {
+      "icon_id": "10998554",
+      "name": "回复",
+      "font_class": "huifu",
+      "unicode": "e78f",
+      "unicode_decimal": 59279
+    },
+    {
+      "icon_id": "726294",
+      "name": "视频",
+      "font_class": "shipin",
+      "unicode": "e672",
+      "unicode_decimal": 58994
+    },
+    {
+      "icon_id": "2240057",
+      "name": "左箭头-圆形",
+      "font_class": "arrow-circle-o-left",
+      "unicode": "e600",
+      "unicode_decimal": 58880
+    },
+    {
+      "icon_id": "3216152",
+      "name": "麦克风",
+      "font_class": "icon--",
+      "unicode": "e74b",
+      "unicode_decimal": 59211
+    },
+    {
+      "icon_id": "3786914",
+      "name": "麦克风",
+      "font_class": "yanjizhushou-shangchuan_maikefeng",
+      "unicode": "e62e",
+      "unicode_decimal": 58926
+    }
+  ]
+}
