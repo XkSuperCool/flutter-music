@@ -49,7 +49,7 @@ $ flutter run
 
 ## 截图
 
-![](https://github.com/XkSuperCool/flutter-music/tree/master/screenshot/Screenshot_1593680474.png)
+![](https://github.com/XkSuperCool/flutter-music/blob/master/screenshot/Screenshot_1593680474.png?raw=true)
 
 ![](\screenshot\Screenshot_1593680486.png)
 
