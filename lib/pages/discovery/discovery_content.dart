@@ -39,7 +39,7 @@ class DiscoveryContentState extends State<DiscoveryContent> {
     _banner = res[0];
     _songList = res[1];
     _recommendedMusics = res[2];
-    setState(() {});
+    if (mounted) setState(() {});
   }
 
   @override

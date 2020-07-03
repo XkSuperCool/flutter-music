@@ -42,10 +42,13 @@ class PlayerMusicState extends State<PlayerMusic> {
       borderRadius: BorderRadius.circular(200.px),
       child: RotateAnimation(
         rotate: music.playerState == AudioPlayerState.PLAYING,
-        child: Image.network(
-          music.musicList[index].al.picUrl,
+        child: Container(
           width: 230.px,
-          fit: BoxFit.fill,
+          height: 230.px,
+          child: Image.network(
+            music.musicList[index].al.picUrl,
+            fit: BoxFit.cover,
+          ),
         ),
       ),
     );

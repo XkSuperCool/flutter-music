@@ -35,7 +35,7 @@ class VideoContentState extends State<VideoContent> with TickerProviderStateMixi
     _categoryList = await VideoApi.getVideoCategoryList();
     // 二次生成 controller
     _tabController = TabController(length: _categoryList.length, vsync: this);
-    setState(() {});
+    if (mounted) setState(() {});
   }
 
   @override
