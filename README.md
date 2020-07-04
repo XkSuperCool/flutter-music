@@ -56,17 +56,5 @@ $ flutter run
 ## 截图
 
 <figure class="third">
-    <img src='https://raw.githubusercontent.com/XkSuperCool/flutter-music/master/screenshot/Screenshot_1593680474.png' width='200'>
-<img src='https://raw.githubusercontent.com/XkSuperCool/flutter-music/master/screenshot/Screenshot_1593680486.png' width='200'>
-<img src='https://raw.githubusercontent.com/XkSuperCool/flutter-music/master/screenshot/Screenshot_1593680501.png' width='200'>
-<img src='https://raw.githubusercontent.com/XkSuperCool/flutter-music/master/screenshot/Screenshot_1593680692.png' width='200'>
-<img src='https://raw.githubusercontent.com/XkSuperCool/flutter-music/master/screenshot/Screenshot_1593680696.png' width='200'>
-<img src='https://raw.githubusercontent.com/XkSuperCool/flutter-music/master/screenshot/Screenshot_1593680792.png' width='200'>
-<img src='https://raw.githubusercontent.com/XkSuperCool/flutter-music/master/screenshot/Screenshot_1593680830.png' width='200'>
-<img src='https://raw.githubusercontent.com/XkSuperCool/flutter-music/master/screenshot/Screenshot_1593680830.png' width='200'>
-<img src='https://raw.githubusercontent.com/XkSuperCool/flutter-music/master/screenshot/Screenshot_1593680839.png' width='200'>
-<img src='https://raw.githubusercontent.com/XkSuperCool/flutter-music/master/screenshot/Screenshot_1593680845.png' width='200'>
-<img src='https://github.com/XkSuperCool/flutter-music/blob/master/screenshot/Screenshot_1593680871.png?raw=true' width='200'>
-<img src='https://github.com/XkSuperCool/flutter-music/blob/master/screenshot/Screenshot_1593681039.png?raw=true' width='200'>
-<img src='https://github.com/XkSuperCool/flutter-music/blob/master/screenshot/Screenshot_1593846778.png?raw=true' width='200'>
+<img src='https://raw.githubusercontent.com/XkSuperCool/flutter-music/master/screenshot/Screenshot_1593680474.png' width='200'><img src='https://raw.githubusercontent.com/XkSuperCool/flutter-music/master/screenshot/Screenshot_1593680486.png' width='200'><img src='https://raw.githubusercontent.com/XkSuperCool/flutter-music/master/screenshot/Screenshot_1593680501.png' width='200'><img src='https://raw.githubusercontent.com/XkSuperCool/flutter-music/master/screenshot/Screenshot_1593680692.png' width='200'><img src='https://raw.githubusercontent.com/XkSuperCool/flutter-music/master/screenshot/Screenshot_1593680696.png' width='200'><img src='https://raw.githubusercontent.com/XkSuperCool/flutter-music/master/screenshot/Screenshot_1593680792.png' width='200'><img src='https://raw.githubusercontent.com/XkSuperCool/flutter-music/master/screenshot/Screenshot_1593680830.png' width='200'><img src='https://raw.githubusercontent.com/XkSuperCool/flutter-music/master/screenshot/Screenshot_1593680830.png' width='200'><img src='https://raw.githubusercontent.com/XkSuperCool/flutter-music/master/screenshot/Screenshot_1593680839.png' width='200'><img src='https://raw.githubusercontent.com/XkSuperCool/flutter-music/master/screenshot/Screenshot_1593680845.png' width='200'><img src='https://github.com/XkSuperCool/flutter-music/blob/master/screenshot/Screenshot_1593680871.png?raw=true' width='200'><img src='https://github.com/XkSuperCool/flutter-music/blob/master/screenshot/Screenshot_1593681039.png?raw=true' width='200'><img src='https://github.com/XkSuperCool/flutter-music/blob/master/screenshot/Screenshot_1593846778.png?raw=true' width='200'>
 </figure>
