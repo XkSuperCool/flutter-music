@@ -16,6 +16,10 @@ Flutter 仿iOS网易云项目，项目只完成了一部分，后面会慢慢完
 
 ## 使用
 
+​	注：本项目接口使用 [NeteaseCloudMusicApi](https://binaryify.github.io/NeteaseCloudMusicApi/#/?id=neteasecloudmusicapi) 所以需要先在本地运行该 node 服务，然后在控制台输入 `ipconfig` 查看本机 ip 地址，再到 utils -> http_request.dart 文件中修改 baseUrl = ip地址:node端口，如：
+
+`baseUrl = http://192.168.0.153:8989`
+
 ```
 // flutter 版本 1.17.1
 $ flutter packages get
