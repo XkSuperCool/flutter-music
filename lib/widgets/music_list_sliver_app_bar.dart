@@ -10,14 +10,18 @@ class MusicListSliverAppBar extends StatelessWidget {
   final Widget content;
   final String coverImgUrl;
   final double expandedHeight;
+  final Widget leading;
   final PreferredSizeWidget bottom;
+  final Widget background;
 
   MusicListSliverAppBar({
     this.title,
     this.bottom,
+    this.leading,
+    this.background,
+    this.coverImgUrl,
     @required this.expandedHeight,
     @required this.content,
-    @required this.coverImgUrl,
   });
 
   @override
@@ -29,13 +33,13 @@ class MusicListSliverAppBar extends StatelessWidget {
         expandedHeight: expandedHeight,
         elevation: 0,
         backgroundColor: Colors.transparent,
-        leading: IconButton(
+        leading: leading ?? IconButton(
           icon: Icon(Icons.arrow_back_ios),
           onPressed: () => Navigator.of(context).pop(),
         ),
         flexibleSpace: FlexibleDetailBar(
           content: content,
-          background: Stack(
+          background: background ?? Stack(
             children: <Widget>[
               Transform.scale(
                 scale: 1.5,

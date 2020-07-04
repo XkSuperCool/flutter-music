@@ -81,7 +81,7 @@ class RecommendSongContentState extends State<RecommendSongContent> {
           ),
           coverImgUrl: 'https://img.599ku.com/element_pic/69/12/81/67/08610b3bfcfd0680ddcc206b191cd338.jpg',
           bottom: MusicListAppBarBottom(
-            _musicList.length,
+            counter: _musicList.length,
             onPlayAll: () => _playMusic(musicProvider),
           ),
         );

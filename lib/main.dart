@@ -1,4 +1,3 @@
-import 'package:flutter_music/viewModel/user_view_model.dart';
 import 'package:provider/provider.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
@@ -8,12 +7,14 @@ import 'viewModel/music_view_model.dart';
 import 'package:flutter_music/theme/theme.dart';
 import 'package:flutter_music/pages/main/main.dart';
 import 'package:flutter_music/router/router.dart';
+import 'package:flutter_music/viewModel/user_view_model.dart';
 
 main() => runApp(
   MultiProvider(
     providers: [
       ChangeNotifierProvider(create: (context) => MusicViewModel()),
-      ChangeNotifierProvider(create: (context) => UserViewModel()),
+      // TODO：lazy = false 不启用懒加载
+      ChangeNotifierProvider(create: (context) => UserViewModel(), lazy: false),
     ],
     child: MusicApp(),
   )

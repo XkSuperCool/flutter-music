@@ -5,7 +5,7 @@ import 'music_cover_progress.dart';
 import 'package:flutter_music/extension/num_extension.dart';
 
 class MusicHeader extends StatefulWidget {
-  final Widget title; // 标题
+  final Widget title; // 标题 中间 widget
   final Widget leftWidget;
   final Widget rightWidget;
   final Color color; // 背景颜色

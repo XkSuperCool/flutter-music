@@ -1,13 +1,14 @@
+import 'dart:convert' as convert;
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
 import 'package:shared_preferences/shared_preferences.dart';
 
-import 'package:flutter_music/extension/num_extension.dart';
-import 'package:flutter_music/model/userModel/user_model.dart';
-import 'package:flutter_music/viewModel/user_view_model.dart';
 import 'package:flutter_music/servives/user_api.dart';
 import 'package:flutter_music/pages/main/main.dart';
+import 'package:flutter_music/viewModel/user_view_model.dart';
+import 'package:flutter_music/extension/num_extension.dart';
+import 'package:flutter_music/model/userModel/user_model.dart';
 
 import 'login_button.dart';
 
@@ -37,7 +38,7 @@ class LoginTelState extends State<LoginTel> {
   }
 
   // 登录方法
-  handleLogin(UserModel userInfo) async {
+  Future<UserModel> handleLogin() async {
     String phone = _telController.value.text;
     String password = _passwordController.value.text;
     UserModel res = await UserApi.login(phone: phone, password: password);
@@ -56,12 +57,12 @@ class LoginTelState extends State<LoginTel> {
         )
       );
     }
-    // 保存到 provider
-    userInfo = res;
     // cookie 本地保存
     SharedPreferences prefs = await SharedPreferences.getInstance();
     prefs.setString('cookie', res.cookie);
-    Navigator.of(context).pushNamed(MainPage.routerName);
+    prefs.setString('userInfo', convert.jsonEncode(res));
+
+    return res;
   }
 
   @override
@@ -98,16 +99,17 @@ class LoginTelState extends State<LoginTel> {
                   obscureText: true
                 ),
               ),
-              Selector<UserViewModel, UserModel>(
-                builder: (ctx, userInfo, child) {
+              Consumer<UserViewModel>(
+                builder: (ctx, userModel, child) {
                   return LoginButton('登录',
                     color: Colors.red,
                     textColor: Colors.white,
-                    clickEvent: () => handleLogin(userInfo),
+                    clickEvent: () async {
+                      userModel.userInfo = await handleLogin();
+                      Navigator.of(context).pushNamed(MainPage.routerName);
+                    },
                   );
                 },
-                selector: (ctx, userModel) => userModel.userInfo,
-                shouldRebuild: (prev, next) => false,
               ),
             ],
           ),

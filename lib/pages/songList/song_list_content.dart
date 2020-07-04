@@ -2,6 +2,7 @@ import 'dart:ui' show  ImageFilter;
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
+import 'package:pull_to_refresh/pull_to_refresh.dart';
 
 import 'song_list_info.dart';
 import 'package:flutter_music/pages/player/player.dart';
@@ -26,18 +27,52 @@ class SongListContent extends StatefulWidget {
 class SongListContentState extends State<SongListContent> {
   SongLisItemModel _songDetail;
   List<MusicItemModel> _tracks = [];
+  int _frequency; // 次数，表示一共可以发送多少次请求获取歌曲信息
+  int _counter = 10; // 每次请求数量
+  RefreshController _refreshController = RefreshController(initialRefresh: false);
 
   @override
   void initState() {
     super.initState();
     SongListApi.getSongListDetail(widget.songListId).then((res) async {
       _songDetail = res;
-      // 获取歌单下面所有的曲目
-      _tracks = await SongListApi.getSongListTracks(
-        res.trackIds.map((i) => i.id).join(',')
-      );
-      setState(() {});
+      _frequency = res.trackIds.length ~/ _counter;
+      // 获取歌单下面的曲目
+      _getSongListTracks();
     });
+  }
+
+  // 获取歌曲
+  Future<bool> _getSongListTracks() async {
+    List<MusicItemModel> tracks = [];
+    if (_frequency != 0) {
+      tracks = await SongListApi.getSongListTracks(
+        _songDetail.trackIds.sublist(0, _counter).map((i) => i.id).join(',')
+      );
+      _songDetail.trackIds.removeRange(0, _counter); // 减去已经请求过的数据
+      _frequency--; // 每发送一次请求，数量减一次
+    } else if (_songDetail.trackIds.length != 0 ) {
+      tracks = await SongListApi.getSongListTracks(
+        _songDetail.trackIds.map((i) => i.id).join(',')
+      );
+      _songDetail.trackIds.removeRange(0, _songDetail.trackIds.length); // 减去已经请求过的数据
+    } else {
+      return false;
+    }
+
+    _tracks.addAll(tracks);
+    if (mounted) setState(() {});
+    return true;
+  }
+
+  // 上拉加载
+  _onLoading() async {
+    bool isFalse = await _getSongListTracks();
+    if (!isFalse) {
+      _refreshController.loadNoData();
+      return;
+    }
+    _refreshController.loadComplete();
   }
 
   // 音乐播放
@@ -59,18 +94,24 @@ class SongListContentState extends State<SongListContent> {
       );
     }
 
-    return CustomScrollView(
-      slivers: <Widget>[
-        _buildHeader(),
-        SliverList(
-          delegate: SliverChildBuilderDelegate(
-            (context, index) {
-              return _buildMusicItem(index);
-            },
-            childCount: _tracks.length,
-          ),
-        )
-      ],
+    return SmartRefresher(
+      controller: _refreshController,
+      enablePullDown: false,
+      enablePullUp: true,
+      onLoading: _onLoading,
+      child: CustomScrollView(
+        slivers: <Widget>[
+          _buildHeader(),
+          SliverList(
+            delegate: SliverChildBuilderDelegate(
+              (context, index) {
+                return _buildMusicItem(index);
+              },
+              childCount: _tracks.length,
+            ),
+          )
+        ],
+      ),
     );
   }
 
@@ -86,7 +127,7 @@ class SongListContentState extends State<SongListContent> {
               filter: ImageFilter.blur(sigmaX: 25, sigmaY: 25),
               child: Column(
                 children: <Widget>[
-                  SizedBox(height: 70),
+                  SizedBox(height: 62.px),
                   SongListInfo(_songDetail)
                 ],
               )
@@ -94,7 +135,7 @@ class SongListContentState extends State<SongListContent> {
           ),
           coverImgUrl: _songDetail.coverImgUrl,
           bottom: MusicListAppBarBottom(
-            _songDetail.trackCount,
+            counter: _songDetail.trackCount,
             onPlayAll: () => _playMusic(musicModel),
           ),
         );

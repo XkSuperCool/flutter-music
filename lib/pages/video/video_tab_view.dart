@@ -4,13 +4,13 @@ import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
 import 'package:pull_to_refresh/pull_to_refresh.dart';
 
+import 'video_play.dart';
 import 'package:flutter_music/servives/video_api.dart';
 import 'package:flutter_music/extension/num_extension.dart';
 import 'package:flutter_music/model/videoModel/video_list_item.dart';
 import 'package:flutter_music/viewModel/music_view_model.dart';
 import 'package:flutter_music/pages/player/player.dart';
 import 'package:flutter_music/utils/util.dart' show formatCounter, formatDate;
-import 'video_play.dart';
 
 class ViewTabView extends StatefulWidget {
   final int id;
@@ -98,7 +98,7 @@ class ViewTabViewState extends State<ViewTabView> {
   }
 
   // 上拉加载提示
-  Widget _buildCustomFooter(BuildContext context,LoadStatus mode){
+  Widget _buildCustomFooter(BuildContext context, LoadStatus mode){
     Widget body;
     if(mode == LoadStatus.idle){
       body =  Text("上拉加载");

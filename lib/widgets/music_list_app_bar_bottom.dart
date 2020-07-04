@@ -6,18 +6,18 @@ class MusicListAppBarBottom extends StatelessWidget with PreferredSizeWidget {
   final int counter;
   final Function onPlayAll;
 
-  MusicListAppBarBottom(this.counter, { this.onPlayAll });
+  MusicListAppBarBottom({ this.counter, this.onPlayAll });
 
   @override
   Widget build(BuildContext context) {
     return Container(
-      height: 47,
+      height: 47.px,
       padding: EdgeInsets.symmetric(horizontal: 15.px),
       decoration: BoxDecoration(
         color: Colors.white,
         borderRadius: BorderRadius.only(
-          topLeft: Radius.circular(25),
-          topRight: Radius.circular(25),
+          topLeft: Radius.circular(25.px),
+          topRight: Radius.circular(25.px),
         )
       ),
       child: Row(
@@ -27,7 +27,7 @@ class MusicListAppBarBottom extends StatelessWidget with PreferredSizeWidget {
             child: _buildPlayAll(),
           )
         ],
-      ),
+      )
     );
   }
 
@@ -62,5 +62,5 @@ class MusicListAppBarBottom extends StatelessWidget with PreferredSizeWidget {
   }
 
   @override
-  Size get preferredSize => Size.fromHeight(40.px);
+  Size get preferredSize => Size.fromHeight(47.px);
 }

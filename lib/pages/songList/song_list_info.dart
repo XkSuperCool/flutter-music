@@ -35,6 +35,7 @@ class SongListInfo extends StatelessWidget {
         SizedBox(width: 10.px),
         Expanded(
           child: Column(
+            crossAxisAlignment: CrossAxisAlignment.start,
             children: <Widget>[
               Text(
                 detail.name,
@@ -43,7 +44,7 @@ class SongListInfo extends StatelessWidget {
                 style: TextStyle(color: Colors.white, fontSize: 17.px)
               ),
               _buildUserInfo(),
-              Text(detail.description,
+              Text(detail.description ?? '',
                 style: TextStyle(color: Color.fromRGBO(207, 210, 217, 1)),
                 maxLines: 2,
                 overflow: TextOverflow.ellipsis,
