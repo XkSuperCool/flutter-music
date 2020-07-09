@@ -1,8 +1,10 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter/rendering.dart';
+import 'package:flutter_staggered_grid_view/flutter_staggered_grid_view.dart';
 
-import 'package:flutter_music/pages/hotCommentWall/hot_comment_wall.dart';
 import 'package:flutter_music/extension/num_extension.dart';
+import 'package:flutter_music/pages/hotCommentWall/hot_comment_wall.dart';
 
 class CloudSquare extends StatefulWidget {
   @override
@@ -27,32 +29,31 @@ class CloudSquareState extends State<CloudSquare> {
 
   @override
   Widget build(BuildContext context) {
-    return MediaQuery.removePadding(
-      context: context,
-      removeTop: true,
-      child: CustomScrollView(
-        slivers: <Widget>[
-          SliverList(
-            delegate: SliverChildListDelegate(
-              [
-                _buildHotCommentWall()
-              ]
-            ),
-          ),
-          SliverGrid(
-            gridDelegate: SliverGridDelegateWithFixedCrossAxisCount(
-              crossAxisCount: 2,
-            ),
-            delegate: SliverChildBuilderDelegate(
-              (ctx, index) {
-                return Container(
-                  color: Colors.green,
-                  child: Text('$index'),
-                );
-              }
-            ),
-          )
-        ],
+    return Padding(
+      padding: EdgeInsets.only(left: 10.px, top: 10.px, right: 10.px),
+      child: MediaQuery.removePadding(
+        context: context,
+        removeTop: true,
+        child: ListView(
+          children: <Widget>[
+            _buildHotCommentWall(),
+            StaggeredGridView.countBuilder(
+              crossAxisCount: 4,
+              itemCount: 20,
+              shrinkWrap: true,
+              physics: NeverScrollableScrollPhysics(),
+              itemBuilder: (BuildContext context, int index) => Container(
+                child: ClipRRect(
+                  borderRadius: BorderRadius.circular(6.px),
+                  child: Image.network('https://picsum.photos/${ index % 2 == 0 ? 200 : 300 }/${ index / 2 == 0 ? 300 : 200 }?random=$index', fit: BoxFit.cover),
+                )
+              ),
+              staggeredTileBuilder: (int index) => StaggeredTile.fit(2),
+              mainAxisSpacing: 6.0,
+              crossAxisSpacing: 6.0,
+            )
+          ],
+        ),
       ),
     );
   }

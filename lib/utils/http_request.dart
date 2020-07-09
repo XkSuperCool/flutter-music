@@ -3,7 +3,7 @@ import 'package:shared_preferences/shared_preferences.dart';
 
 class Http {
   static final BaseOptions baseOptions = BaseOptions(
-    baseUrl: 'http://192.168.0.153:8989',
+    baseUrl: 'http://192.168.0.104:8989',
     connectTimeout: 10000
   );
 

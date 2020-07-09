@@ -108,27 +108,23 @@ class HotCommentContentWallState extends State<HotCommentWallContent> {
   Widget build(BuildContext context) {
     if (_hotComments.length == 0) return SizedBox();
 
-    return Material(
-      child: Scaffold(
-        body: Stack(
-          children: <Widget>[
-            _buildCover(),
-            _buildContainer(),
-            Positioned(
-              bottom: 90.px,
-              left: 0,
-              right: 0,
-              child: _otherComment()
-            ),
-            Positioned(
-              bottom: 0,
-              left: 0,
-              right: 0,
-              child: _buildReply()
-            ),
-          ],
+    return Stack(
+      children: <Widget>[
+        _buildCover(),
+        _buildContainer(),
+        Positioned(
+          bottom: 90.px,
+          left: 0,
+          right: 0,
+          child: _otherComment()
         ),
-      ),
+        Positioned(
+          bottom: 0,
+          left: 0,
+          right: 0,
+          child: _buildReply()
+        ),
+      ],
     );
   }
 
@@ -275,7 +271,7 @@ class HotCommentContentWallState extends State<HotCommentWallContent> {
               ),
               child: Selector<MusicViewModel, MusicViewModel>(
                 builder: (ctx, musicModel, child) {
-                  musicModel.audioPlayer.stop(); // 暂停播放音乐
+                  musicModel.audioPlayer.pause(); // 暂停播放音乐
                   return ListView(
                     scrollDirection: Axis.horizontal,
                     shrinkWrap: true,

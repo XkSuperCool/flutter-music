@@ -1,10 +1,10 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 
+import 'cloud_square.dart';
+import 'cloud_friends_news.dart';
 import 'package:flutter_music/extension/num_extension.dart';
 import 'package:flutter_music/widgets/music_header.dart';
-
-import 'cloud_square.dart';
 
 class CloudContent extends StatefulWidget {
   @override
@@ -33,12 +33,12 @@ class CloudContentState extends State<CloudContent> with TickerProviderStateMixi
         Container(
           margin: EdgeInsets.only(top: 70.px),
           child: Padding(
-            padding: EdgeInsets.only(left: 10.px, right: 10.px, top: 6.px),
+            padding: EdgeInsets.only(),
             child: TabBarView(
               controller: _tabController,
               children: <Widget>[
                 CloudSquare(),
-                Text('2'),
+                FriendsNews()
               ],
             ),
           ),
