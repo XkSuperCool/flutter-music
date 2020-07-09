@@ -9,7 +9,7 @@ import 'package:shared_preferences/shared_preferences.dart';
 import 'music_card.dart';
 import 'my_music_box.dart';
 import 'my_app_bar_bottom.dart';
-import 'package:flutter_music/servives/user_api.dart';
+import 'package:flutter_music/services/user_api.dart';
 import 'package:flutter_music/pages/login/login.dart';
 import 'package:flutter_music/pages/songList/song_list.dart';
 import 'package:flutter_music/extension/num_extension.dart';
@@ -165,7 +165,7 @@ class MyContentState extends State<MyContent> with TickerProviderStateMixin {
               scrollDirection: Axis.horizontal,
               children: <Widget>[
                 MusicCard(
-                  backgroundImgUrl: _userLike.coverImgUrl,
+                  backgroundImgUrl: _userLike?.coverImgUrl,
                   onTab: () => Navigator.of(context).pushNamed(SongListPage.routerName, arguments: _userLike.id),
                   centerWidget: _buildCardCenterWidget('我喜欢的音乐', Icons.favorite),
                   bottomWidget: RawChip(

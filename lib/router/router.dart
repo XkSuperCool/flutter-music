@@ -1,4 +1,5 @@
 import 'package:flutter/cupertino.dart';
+import 'package:flutter_music/pages/hotCommentWall/hot_comment_wall.dart';
 import 'package:flutter_music/pages/login/login.dart';
 import 'package:flutter_music/pages/main/main.dart';
 
@@ -14,6 +15,7 @@ class Router {
     SongListPage.routerName: (context) => SongListPage(),
     SongListSquare.routerName: (context) => SongListSquare(),
     LoginPage.routerName: (context) => LoginPage(),
-    RecommendSongPage.routerName: (context) => RecommendSongPage()
+    RecommendSongPage.routerName: (context) => RecommendSongPage(),
+    HotCommentWall.routerName: (context) => HotCommentWall()
   };
 }

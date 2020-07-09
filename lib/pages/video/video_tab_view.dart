@@ -5,7 +5,7 @@ import 'package:provider/provider.dart';
 import 'package:pull_to_refresh/pull_to_refresh.dart';
 
 import 'video_play.dart';
-import 'package:flutter_music/servives/video_api.dart';
+import 'package:flutter_music/services/video_api.dart';
 import 'package:flutter_music/extension/num_extension.dart';
 import 'package:flutter_music/model/videoModel/video_list_item.dart';
 import 'package:flutter_music/viewModel/music_view_model.dart';

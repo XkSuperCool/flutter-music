@@ -4,7 +4,7 @@ import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
 import 'package:shared_preferences/shared_preferences.dart';
 
-import 'package:flutter_music/servives/user_api.dart';
+import 'package:flutter_music/services/user_api.dart';
 import 'package:flutter_music/pages/main/main.dart';
 import 'package:flutter_music/viewModel/user_view_model.dart';
 import 'package:flutter_music/extension/num_extension.dart';

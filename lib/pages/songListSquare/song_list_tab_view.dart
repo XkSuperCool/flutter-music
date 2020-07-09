@@ -4,7 +4,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_music/extension/num_extension.dart';
 import 'package:flutter_music/model/dscoveryModel/song_list_model.dart';
 import 'package:flutter_music/pages/songList/song_list.dart';
-import 'package:flutter_music/servives/song_list_api.dart';
+import 'package:flutter_music/services/song_list_api.dart';
 import 'package:flutter_music/widgets/music_card.dart';
 import 'package:pull_to_refresh/pull_to_refresh.dart';
 

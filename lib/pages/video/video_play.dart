@@ -3,7 +3,7 @@ import 'package:flutter/material.dart';
 import 'package:fijkplayer/fijkplayer.dart';
 
 import 'package:flutter_music/extension/num_extension.dart';
-import 'package:flutter_music/servives/video_api.dart';
+import 'package:flutter_music/services/video_api.dart';
 
 class VideoPlay extends StatefulWidget {
   final String id;

@@ -5,7 +5,7 @@ import 'package:flutter_swiper/flutter_swiper.dart';
 
 import 'package:flutter_music/widgets/music_header.dart';
 import 'package:flutter_music/extension/num_extension.dart';
-import 'package:flutter_music/servives/discovery_api.dart';
+import 'package:flutter_music/services/discovery_api.dart';
 import 'package:flutter_music/model/dscoveryModel/banner_model.dart';
 import 'package:flutter_music/model/dscoveryModel/song_list_model.dart';
 import 'discovery_music_recommend.dart';

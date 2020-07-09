@@ -6,7 +6,7 @@ import 'package:pull_to_refresh/pull_to_refresh.dart';
 
 import 'song_list_info.dart';
 import 'package:flutter_music/pages/player/player.dart';
-import 'package:flutter_music/servives/song_list_api.dart';
+import 'package:flutter_music/services/song_list_api.dart';
 import 'package:flutter_music/widgets/music_list_item.dart';
 import 'package:flutter_music/extension/num_extension.dart';
 import 'package:flutter_music/viewModel/music_view_model.dart';

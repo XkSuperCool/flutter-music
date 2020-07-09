@@ -1,3 +1,4 @@
+import 'package:animations/animations.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 
@@ -5,8 +6,8 @@ import 'package:flutter_music/extension/num_extension.dart';
 import 'package:flutter_music/model/dscoveryModel/recommend_music_model.dart';
 import 'package:flutter_music/model/musicProviderModel/music_item_model.dart';
 import 'package:flutter_music/pages/player/player.dart';
-import 'package:flutter_music/servives/music_provider_api.dart';
-import 'package:flutter_music/servives/song_list_api.dart';
+import 'package:flutter_music/services/music_provider_api.dart';
+import 'package:flutter_music/services/song_list_api.dart';
 import 'package:provider/provider.dart';
 import 'package:flutter_music/viewModel/music_view_model.dart';
 import 'package:flutter_music/widgets/click_animation.dart';

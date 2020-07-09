@@ -6,6 +6,13 @@
   "description": "",
   "glyphs": [
     {
+      "icon_id": "7342562",
+      "name": "引号",
+      "font_class": "yinhao",
+      "unicode": "e61a",
+      "unicode_decimal": 58906
+    },
+    {
       "icon_id": "8625037",
       "name": "云 (3)",
       "font_class": "yun",

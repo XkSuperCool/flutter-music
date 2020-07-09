@@ -7,7 +7,7 @@ import 'package:provider/provider.dart';
 import 'package:flutter_music/pages/player/player.dart';
 import 'package:flutter_music/widgets/music_list_app_bar_bottom.dart';
 import 'package:flutter_music/model/musicProviderModel/music_item_model.dart';
-import 'package:flutter_music/servives/recommend_song_api.dart';
+import 'package:flutter_music/services/recommend_song_api.dart';
 import 'package:flutter_music/viewModel/music_view_model.dart';
 import 'package:flutter_music/extension/num_extension.dart';
 import 'package:flutter_music/widgets/music_list_sliver_app_bar.dart';

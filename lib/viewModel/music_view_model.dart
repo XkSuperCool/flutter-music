@@ -6,7 +6,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_music/model/musicProviderModel/current_music.dart';
 import 'package:flutter_music/model/musicProviderModel/music_item_model.dart';
 import 'package:flutter_music/model/musicProviderModel/check_music.dart';
-import 'package:flutter_music/servives/music_provider_api.dart';
+import 'package:flutter_music/services/music_provider_api.dart';
 
 enum MusicPlayerMode {
   SingleCycle, // 单曲循环

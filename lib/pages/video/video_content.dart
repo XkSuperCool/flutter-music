@@ -4,7 +4,7 @@ import 'package:provider/provider.dart';
 
 import 'video_tab_view.dart';
 import 'package:flutter_music/pages/login/login.dart';
-import 'package:flutter_music/servives/video_api.dart';
+import 'package:flutter_music/services/video_api.dart';
 import 'package:flutter_music/widgets/music_header.dart';
 import 'package:flutter_music/extension/num_extension.dart';
 import 'package:flutter_music/viewModel/user_view_model.dart';

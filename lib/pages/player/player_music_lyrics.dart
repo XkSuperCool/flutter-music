@@ -4,7 +4,7 @@ import 'package:provider/provider.dart';
 import 'package:flutter/material.dart';
 
 import 'package:flutter_music/model/playerModel/lyrics_model.dart';
-import 'package:flutter_music/servives/player_api.dart';
+import 'package:flutter_music/services/player_api.dart';
 import 'package:flutter_music/viewModel/music_view_model.dart';
 import 'package:flutter_music/extension/num_extension.dart';
 
