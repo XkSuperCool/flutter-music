@@ -60,7 +60,7 @@ class CloudSquareState extends State<CloudSquare> {
 
   // 热评墙
   Widget _buildHotCommentWall() {
-    String day = DateTime.now().day > 10 ? DateTime.now().day.toString() : '0' + DateTime.now().day.toString();
+    String day = DateTime.now().day >= 10 ? DateTime.now().day.toString() : '0' + DateTime.now().day.toString();
 
     return GestureDetector(
       onTap: () {

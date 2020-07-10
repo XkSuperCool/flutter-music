@@ -21,6 +21,11 @@ class UserViewModel extends ChangeNotifier {
 
   bool get isLogin => _isLogin;
 
+  set isLogin(bool boolean) {
+    _isLogin = boolean;
+    notifyListeners();
+  }
+
   UserModel get userInfo => _userInfo;
 
   set userInfo(UserModel userInfo) {
