@@ -28,7 +28,7 @@ class SongListContentState extends State<SongListContent> {
   SongLisItemModel _songDetail;
   List<MusicItemModel> _tracks = [];
   int _frequency; // 次数，表示一共可以发送多少次请求获取歌曲信息
-  int _counter = 10; // 每次请求数量
+  int _counter = 50; // 每次请求数量
   RefreshController _refreshController = RefreshController(initialRefresh: false);
 
   @override
