@@ -64,7 +64,7 @@ class CloudSquareState extends State<CloudSquare> {
 
     return GestureDetector(
       onTap: () {
-        Navigator.of(context).pushNamed(HotCommentWall.routerName);
+        Navigator.of(context).pushNamed(HotCommentWallPage.routerName);
       },
       child: Container(
         padding: EdgeInsets.all(10.px),

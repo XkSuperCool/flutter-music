@@ -22,7 +22,10 @@ class AccountContent extends StatelessWidget {
           backgroundColor: Colors.black,
           leading: IconButton(icon: Icon(Icons.fullscreen), onPressed: () {}),
           actions: <Widget>[
-            MusicCoverProgress()
+            Padding(
+              padding: EdgeInsets.symmetric(vertical: 10.px),
+              child: MusicCoverProgress(),
+            )
           ],
           expandedHeight: 190.px,
           flexibleSpace: _buildFlexibleSpace(),

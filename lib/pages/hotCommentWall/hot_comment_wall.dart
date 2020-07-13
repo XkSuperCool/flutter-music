@@ -3,7 +3,7 @@ import 'package:flutter/material.dart';
 
 import 'hot_comment_wall_content.dart';
 
-class HotCommentWall extends StatelessWidget {
+class HotCommentWallPage extends StatelessWidget {
   static String routerName = '/hotCommentWall';
 
   @override

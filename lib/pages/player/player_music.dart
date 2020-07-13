@@ -33,7 +33,7 @@ class PlayerMusicState extends State<PlayerMusic> {
               child: isShowLyrics ? Padding(
                 padding: EdgeInsets.only(top: 10),
                 child: MusicLyrics(musicModel.currentPlayerMusicItem.id),
-              ) : _buildCover(musicModel, curIndex),
+              ) : _buildCover(musicModel, curIndex, idx),
             )
           ),
           itemCount: musicModel.musicList.length,
@@ -64,7 +64,7 @@ class PlayerMusicState extends State<PlayerMusic> {
   }
 
   // 封面 + 旋转动画
-  Widget _buildCover(MusicViewModel music, int index) {
+  Widget _buildCover(MusicViewModel music, int index, int idx) {
     return ClipRRect(
       borderRadius: BorderRadius.circular(200.px),
       child: RotateAnimation(

@@ -53,28 +53,32 @@ class VideoContentState extends State<VideoContent> with TickerProviderStateMixi
         }
         return child;
       },
-      child: Column(
+      child: Stack(
         children: <Widget>[
-          MusicHeader(
-            leftWidget: IconButton(
-              icon: Icon(IconData(0xe672, fontFamily: 'iconfont')),
-              onPressed: () {},
-            ),
-          ),
-          TabBar(
-            isScrollable: true,
-            labelPadding: EdgeInsets.symmetric(vertical: 10.px, horizontal: 15.px),
-            controller: _tabController,
-            tabs: _categoryList.map((item) => Text(item.name)).toList(),
-          ),
-          Expanded(
+          Padding(
+            padding: EdgeInsets.only(top: 100.px),
             child: TabBarView(
               controller: _tabController,
               children: _categoryList.map((item) => (
                 ViewTabView(item.id)
               )).toList(),
             ),
-          )
+          ),
+          Padding(
+            padding: EdgeInsets.only(top: 60.px),
+            child: TabBar(
+              isScrollable: true,
+              labelPadding: EdgeInsets.symmetric(vertical: 10.px, horizontal: 15.px),
+              controller: _tabController,
+              tabs: _categoryList.map((item) => Text(item.name)).toList(),
+            ),
+          ),
+          MusicHeader(
+            leftWidget: IconButton(
+              icon: Icon(IconData(0xe672, fontFamily: 'iconfont')),
+              onPressed: () {},
+            ),
+          ),
         ],
       ),
     );
